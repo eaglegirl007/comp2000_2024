@@ -27,6 +27,8 @@ DavePearce
 Neither have been active recently. Maybe the creators have moved on to another project they deem more important, or they are satisfied with what has been created. They may also be waiting for others to hopefully collaborate if they are stuck on a specific problem.
 
   * 🤔 Which file in each project has had the most activity?
+A) pycache
+B) LICENSE
 
 # Task 2
 
