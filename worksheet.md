@@ -42,3 +42,4 @@ Modify the application so that instead it prints
 Red vs. Blue
 ~~~~~
 
+System.out.println("~~~~~\n" + "Red vs. Blue\n" + "~~~~~");
