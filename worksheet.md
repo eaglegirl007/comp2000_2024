@@ -8,9 +8,9 @@ Take a look at the two repositories:
 
   * (A) https://bitbucket.org/altmattr/personalised-correlation/src/master/
   * (B) https://github.com/Whiley/WhileyCompiler
-
 And answer the following questions about them:
 
+<<<<<<< HEAD
   * These repositories are at two different websites - github and bitbucket - what are these sites? What service do they provide? Which is better?
 Both are websites that are used for hosting code. The code can be accessed and edited by many users in their own 'forks' for easier collaborative programming. It also allows programmers to access previous iterations of the code if something goes wrong.
 
