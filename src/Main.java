@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Main extends JFrame {
+    private int width = 720;
+    private int height = 720;
 
     private Main() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -13,14 +15,25 @@ public class Main extends JFrame {
 
     public static void main(String[] args) throws Exception {
         Main window = new Main();
+        window.run();
 
     }
 
     class Canvas extends JPanel {
         public Canvas() {
-            setPreferredSize(new Dimension(720, 720));
-            Grid grid = new Grid(10, 10);
+            setPreferredSize(new Dimension(width, height));
+        }
+
+        @Override
+        public void paint(Graphics g) {
+            Point p = getMousePosition();
+            new Grid(g, p);
         }
     }
 
+    public void run() {
+        while (true) {
+            this.repaint();
+        }
+    }
 }

@@ -4,25 +4,25 @@ import java.awt.*;
 public class Cell extends JPanel {
     int x;
     int y;
-    int width;
-    int height;
-    Color borderColour;
-    Color innerColour;
+    Graphics g;
+    Point p;
+    int size = 35;
 
-    Cell(int CuX, int CuY, int CuWidth, int CuHeight, Color CuBorderColour, Color CuInnerColour) {
+    Cell(Graphics graphics, int CuX, int CuY, Point mousePos) {
         x = CuX;
         y = CuY;
-        width = CuWidth;
-        height = CuHeight;
-        borderColour = CuBorderColour;
-        innerColour = CuInnerColour;
-    }
+        g = graphics;
+        p = mousePos;
 
-    @Override
-    public void paint(Graphics g) {
-        g.setColor(borderColour);
-        g.drawRect(x, y, width, height);
-        g.setColor(innerColour);
-        g.fillRect(x, y, width, height);
+        if (p != null && (p.x - 10) / size == x && (p.y - 10) / size == y)
+
+        {
+            g.setColor(Color.GRAY);
+        } else {
+            g.setColor(Color.WHITE);
+        }
+        graphics.fillRect(x * size + 10, y * size + 10, size, size);
+        g.setColor(Color.BLACK);
+        graphics.drawRect(x * size + 10, y * size + 10, size, size);
     }
 }
